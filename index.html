@@ -3,40 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Adelaide Task Manager</title>
+  <title>Task Manager</title>
   <link rel="stylesheet" href="style.css" />
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <header>
-    <h1>Scripta Task Manager</h1>
-    <p>Organize, track, and manage your daily tasks</p>
+  <main class="container">
+    <header><h1>Task Manager</h1>
+    <p>Manage your daily tasks easily ✨</p>   
   </header>
-
-  <main>
-    <section class="task-input">
-      <input type="text" id="taskInput" placeholder="Enter a new task..." />
-      <button id="addBtn"><i class="fas fa-plus"></i> Add Task</button>
-    </section>
-
-    <section class="task-stats">
-      <p id="taskCounter">Total Tasks: 0 | Completed: 0</p>
-    </section>
-
-    <section class="task-list">
-      <ul id="taskList"></ul>
-    </section>
-
-    <section class="task-clear">
-      <button id="clearAllBtn"><i class="fas fa-trash-alt"></i> Clear All Tasks</button>
-    </section>
+  <div><form id="task-form">
+    <input type="text" id="task-input" placeholder="Add a new task" required />
+    <button type="submit">Add Task</button>
+  </form>
+  <ul id="task-list">
+    <li>task-1</li>
+    <li>task-2</li>
+    <li>task-3</li>
+  </ul>
+</div>
   </main>
 
   <footer>
-    <p>&copy; 2025 ADELAIDE | TASK MANAGER</p>
+    <p>&copy; 2025 ADELAIDEGROUP </p>
   </footer>
 
-  <script src="app.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

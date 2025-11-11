@@ -1,173 +1,61 @@
-/* ======== Base Reset ======== */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-
-/* ======== Body ======== */
 body {
-  background: linear-gradient(135deg, #e1b3f5, #f9a8d4);
-  color: #333;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+    background-color: #6799ab;
+    padding : 20px;
 }
-
-/* ======== Header ======== */
-header {
-  text-align: center;
-  padding: 1.5rem;
-  background-color: #9b59b6;
-  color: white;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+h1 {
+    margin-bottom: 20px;
 }
-
-header h1 {
-  font-size: 2rem;
-  margin-bottom: 0.3rem;
+input,
+ button {
+    outline: none;
+    border: none;
+    font-family: inherit;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    font-weight: 600;
+    cursor:pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 1rem;
+    &:hover {
+        background-color: #6b6969;
+    }
 }
-
-header p {
-  font-size: 1rem;
-  opacity: 0.9;
+.container {
+    max-width: 900px;
+    margin:0 auto;
 }
-
-/* ======== Main Container ======== */
-main {
-  flex: 1;
-  width: 90%;
-  max-width: 600px;
-  margin: 2rem auto;
-  background-color: rgba(255, 255, 255, 0.95);
-  padding: 2rem;
-  border-radius: 15px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-}
-
-/* ======== Input Section ======== */
-.task-input {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1rem;
-}
-
-.task-input input {
-  flex: 1;
-  padding: 0.6rem;
-  font-size: 1rem;
-  border-radius: 8px;
-  border: 1px solid #aaa;
-}
-
-.task-input button {
-  margin-left: 0.5rem;
-  padding: 0.6rem 1rem;
-  background-color: #d254e0;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.task-input button:hover {
-  background-color: #a93fad;
-}
-
-/* ======== Task List ======== */
-.task-list ul {
-  list-style-type: none;
-  padding: 0;
-}
-
 .task-item {
-  background-color: #f5e6fa;
-  margin-bottom: 0.6rem;
-  border-radius: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.6rem 1rem;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    max-width: 260px;
+    height: 25px;
+    margin: 5px 0;
+    background-color:#fff ;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    cursor: pointer;
+    padding-left: 10px;
+    padding-top: 3px;
+    animation: animateIn 0.3s ease;
 }
-
-.task-item span {
-  flex: 1;
+@keyframes animateIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
-
-.task-item.completed span {
-  text-decoration: line-through;
-  color: #777;
-}
-
-/* ======== Buttons in Task ======== */
-.task-buttons button {
-  border: none;
-  border-radius: 6px;
-  margin-left: 0.3rem;
-  padding: 0.4rem 0.6rem;
-  cursor: pointer;
-  color: white;
-}
-
-.complete {
-  background-color: #27ae60;
-}
-
-.complete:hover {
-  background-color: #219150;
-}
-
-.delete {
-  background-color: #e74c3c;
-}
-
-.delete:hover {
-  background-color: #c0392b;
-}
-
-/* ======== Clear All Button ======== */
-#clearAllBtn {
-  background-color: #b356cc;
-  color: white;
-  font-weight: bold;
-  border: none;
-  padding: 0.7rem 1.2rem;
-  border-radius: 8px;
-  cursor: pointer;
-  margin-top: 1rem;
-}
-
-#clearAllBtn:hover {
-  background-color: #9c35b0;
-}
-
-/* ======== Footer ======== */
-footer {
-  text-align: center;
-  padding: 1rem;
-  background-color: #9b59b6;
-  color: white;
-  font-size: 0.9rem;
-}
-
-/* ======== Responsive Design ======== */
-@media (max-width: 600px) {
-  main {
-    width: 95%;
-    padding: 1.2rem;
-  }
-
-  .task-input input {
-    font-size: 0.9rem;
-  }
-
-  .task-input button {
-    padding: 0.5rem 0.8rem;
-    font-size: 0.9rem;
-  }
+.completed {
+    text-decoration: line-through;
+    background-color: chartreuse;
 }

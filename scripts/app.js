@@ -21,6 +21,11 @@ taskForm.addEventListener('submit', function(event) {
     taskItem.classList.add('task-item');
     taskItem.textContent= `${taskIndex}. ${taskText}`;
 
+taskItem.addEventListener('click', function() {
+    console.log('completed');            
+    this.classList.toggle('completed');
+});
+
     //Append the task item to the task list
     taskList.appendChild(taskItem);
 

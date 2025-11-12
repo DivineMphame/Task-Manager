@@ -1,10 +1,10 @@
 const taskForm= document.getElementById('task-form');
-const taskList= document.getElementById('task-input');
+const taskList= document.getElementById('task-list');
 
 //Counter variable track the task index
 let taskIndex= 1;
 
-// console.log(taskForm, taskList);
+console.log(taskForm, taskList);
 
 taskForm.addEventListener('submit', function(event) {
     event.preventDefault();
